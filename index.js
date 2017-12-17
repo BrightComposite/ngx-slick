@@ -139,7 +139,9 @@ var SlickComponent = (function () {
     SlickComponent.prototype.unslick = function () {
         var _this = this;
         this.zone.run(function () {
-            _this.$instance.slick('unslick');
+            if (_this.$instance) {
+                _this.$instance.slick('unslick');
+            }
         });
     };
     return SlickComponent;
